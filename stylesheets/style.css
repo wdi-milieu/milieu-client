@@ -1,21 +1,32 @@
-h1 {
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+h3 {
   font-family: 'Hind Guntur', sans-serif;
 }
 
 #brandlogo {
+  height: 5vh;
+  padding-bottom: 10px;
+}
+
+#brandname {
   font-family: 'Hind Guntur', sans-serif;
   font-size: 20px;
   text-align: center;
+  color: inherit;
+  line-height: inherit;
 }
 
-#chartbrands {
+#title{
   text-align: center;
-  font-family: 'Lato', sans-serif;
 }
 
 .hr {
   margin-top: 0;
-  margin-bottom: 4px;
+  /*margin-bottom: 4px;*/
+  width: 30vw;
 }
 
 .borderright {

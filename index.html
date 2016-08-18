@@ -11,7 +11,7 @@
   <body>
 
     <!-- header -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -21,23 +21,46 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" id="brandlogo">MILLIEU</a>
+
+          <a class="navbar-brand" href="#"><img alt="Brand" src="/public/logo.png" id="brandlogo"></a>
+          <a class="navbar-brand" href="#" id="brandname">MILLIEU</a>
         </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">LOGIN</a></li>
+        </ul>
       </div><!-- /.container-fluid -->
     </nav>
 
 
-    <div class="container-fluid" id="chartbrands">
+    <div class="container-fluid">
       <!-- <div class="" id="chartbrands"> -->
-      <h3>CURRENT PULSE</h3>
+      <div>
+        <h3  id="title">CURRENT PULSE</h3>
+      </div>
       <hr class="hr">
 
       <div class="row">
         <div class="col-md-8 borderright">
-          this is where the graph for brands is supposed to be in
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Brand Graph</h3>
+            </div>
+            <div class="panel-body" id="graph">
+              Panel content
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
-          this is where the twitter sentiments is supposed to be in
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Twitter Sentiments</h3>
+            </div>
+            <div class="panel-body" id="twitter">
+              Panel content
+            </div>
+          </div>
         </div>
       </div>
     </div>
