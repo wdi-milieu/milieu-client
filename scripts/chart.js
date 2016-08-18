@@ -1,80 +1,74 @@
-var data = [{brand: "Nike", rating: 8},
-            {brand: "Adidas", rating: 9},
-            {brand: "Reebok", rating: 7},
-            {brand: "New Balance", rating: 5.1},
-            {brand: "Li Ning", rating: 5.5},
-            {brand: "Puma", rating: 6},
-            {brand: "Under Armour", rating: 7},
-            {brand: "Mikasa", rating: 7},
-            {brand: "Mizuno", rating: 7},
-            {brand: "Lotto", rating: 10},
-            {brand: "Nike", rating: 8},
-            {brand: "Adidas", rating: 9},
-            {brand: "Reebok", rating: 7},
-            {brand: "New Balance", rating: 5.1},
-            {brand: "Li Ning", rating: 5.5},
-            {brand: "Puma", rating: 6},
-            {brand: "Under Armour", rating: 1},
-            {brand: "Mikasa", rating: 7},
-            {brand: "Mizuno", rating: 7},
-            {brand: "Junius", rating: 0.1}
+var data = [{brand: "Apple", rating: 8.9},
+            {brand: "Samsung", rating: 9},
+            {brand: "Breadtalk", rating: 7},
+            {brand: "Singtel", rating: 3},
+            {brand: "Starhub", rating: 3},
+            {brand: "Google", rating: 8.8},
+            {brand: "NTUC", rating: 7},
+            {brand: "Giant", rating: 7},
+            {brand: "Trump", rating: 1}
           ];
 
-var barWidth = 40;
-var width = (barWidth + 10) * data.length;
-var height = 300;
+var canvasWidth = 500;
+var barHeight = 20;
+var maxRating = 10;
+var barMarginLeft = 150;
 
 //domain -> set how many bars, range sets where does the bar chart starts and ends
-var x = d3.scale.linear().domain([0, data.length]).range([0, width]);
-var y = d3.scale.linear().domain([0, d3.max(data, function(datum) { return datum.rating; })]).
-  rangeRound([0, height]);
+var widthScale = d3.scale.linear().domain([0, maxRating]).range([0, canvasWidth]);
 
-$('<h3>Horizontal Brand Chart</h3>').appendTo($('#hBarChart'));
-
-var hWidth = 800;
-var hBarHeight = 20;
+var axis = d3.svg.axis().scale(widthScale);
 
 //Creating the canvas
 // https://github.com/d3/d3/blob/master/API.md#selections-d3-selection
-var hChart = d3.select("#hBarChart").
+var Chart = d3.select("#barChart").
   append("svg").
-  attr("width", hWidth).
-  attr("height", hBarHeight * data.length);
+  attr("width", canvasWidth + barMarginLeft + 30).
+  attr("height", barHeight * ( data.length + 2 ));
 
 //Creating the bars
-hChart.selectAll("rect").
+Chart.selectAll("rect").
   data(data).
   enter().
   append("rect").
-  attr("x", 150).
-  attr("width", function(datum) { return x(datum.rating); }).
-  attr("height", hBarHeight - 3).
+  attr("x", barMarginLeft).
+  attr("width", function(d) { return widthScale(d.rating); }).
+  attr("height", barHeight - 3).
   attr("rx", 5).
-  attr("fill", "orange").
-  attr("transform", function(datum, index) { return "translate(0," + index * hBarHeight + ")"; });
+  attr("fill", "#005aff").
+  attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
 
-hChart.selectAll("text").
+Chart.selectAll("text").
   data(data).
   enter().
   append("text").
-  attr("x", function(datum) { return x(datum.rating) +130; }).
-  attr("y", hBarHeight/2 - 1).
+  attr("x", barMarginLeft + 10).
+  attr("y", barHeight/2 - 1).
   attr("dy", ".35em").
-  text(function(datum) {return datum.rating; }).
+  text(function(d) {return d.rating; }).
   attr("style", "font-size: 0.8em; font-family: Helvetica, sans-serif").
   attr("fill", "white").
-  attr("transform", function(datum, index) { return "translate(0," + index * hBarHeight + ")"; });
+  attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
 
-hChart.selectAll("text.yAxis").
+Chart.selectAll("text.yAxis").
   data(data).
   enter().
   append("text").
-  attr("x", 140).
-  attr("y", hBarHeight/2 + 3).
-  text(function(datum) { return datum.brand; } ).
+  attr("x", barMarginLeft - 10).
+  attr("y", barHeight/2 + 3).
+  text(function(d) { return d.brand; } ).
   attr("style", "font-size: 0.8em; font-family: Helvetica, sans-serif").
   attr("text-anchor", "end").
-  attr("transform", function(datum, index) { return "translate(0," + index * hBarHeight + ")"; });
+  attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+Chart.append("g").
+  attr("transform", "translate(" + barMarginLeft + "," + (barHeight * data.length) + ")").
+  attr("style", "font-size: 0.8em; font-family: Helvetica, sans-serif").
+  attr("fill", "#89b3ff").
+  call(axis);
+
+  // var y = d3.scale.linear().domain([0, d3.max(data, function(d) { return d.rating; })]).rangeRound([0, barHeight]);
+
 //
 // hChart.selectAll("text.xAxis").
 //   data(data).
