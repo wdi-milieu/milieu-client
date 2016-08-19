@@ -2,21 +2,34 @@
   font-family: 'Lato', sans-serif;
 }
 
+html {
+  background-color: #FFFFFF;
+}
+
 h3 {
   font-family: 'Hind Guntur', sans-serif;
 }
 
-#brandlogo {
-  height: 5vh;
-  padding-bottom: 10px;
+#header {
+  /*border: 1px solid lightgrey;*/
+  text-align: center;
+  padding: 70px;
+
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #D0E0EC, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #D0E0EC, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #D0E0EC, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to obottom right, #D0E0EC, white); /* Standard syntax */
 }
 
 #brandname {
   font-family: 'Hind Guntur', sans-serif;
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
   color: inherit;
   line-height: inherit;
+  letter-spacing: 3px;
+  display: none;
 }
 
 #title{
