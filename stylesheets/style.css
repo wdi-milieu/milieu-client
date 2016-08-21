@@ -10,26 +10,34 @@ h3 {
   font-family: 'Hind Guntur', sans-serif;
 }
 
-#header {
-  /*border: 1px solid lightgrey;*/
+.jumbotron {
+  height: 80vh;
   text-align: center;
-  padding: 70px;
-
-  background: red; /* For browsers that do not support gradients */
+  position: relative;
   background: -webkit-linear-gradient(left top, #D0E0EC, white); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #D0E0EC, white); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #D0E0EC, white); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to obottom right, #D0E0EC, white); /* Standard syntax */
 }
 
+#arrow {
+  display: block;
+  margin-top: 5vh;
+}
+
+a svg:hover #arrowlink{
+  stroke: white;
+}
+
 #brandname {
   font-family: 'Hind Guntur', sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   color: inherit;
   line-height: inherit;
   letter-spacing: 3px;
   display: none;
+  margin-top: 25vh;
 }
 
 #title{
@@ -42,6 +50,6 @@ h3 {
   width: 30vw;
 }
 
-.borderright {
-  border-right: 1px solid lightgrey;
+#graph {
+  height: 70vh;
 }
