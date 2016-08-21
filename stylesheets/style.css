@@ -10,6 +10,38 @@ h3 {
   font-family: 'Hind Guntur', sans-serif;
 }
 
+#category, #reason {
+  height: 295px;
+}
+
+#reason {
+  margin-top: -65%;
+}
+
+#chart-ring-category {
+  margin-left: 25%;
+}
+
+#chart-row-reason {
+  margin-top: 5%;
+}
+
+#chart-row-twitterpos {
+  background-color: rgb(212, 244, 206);
+  border-radius: 5px;
+  margin-bottom: 1%;
+}
+
+#twitterbutton:hover {
+  color: red;
+  cursor:pointer;
+}
+
+#chart-row-twitterneg {
+  background-color: rgb(246, 223, 229);
+  border-radius: 5px;
+}
+
 .jumbotron {
   height: 80vh;
   text-align: center;
@@ -40,6 +72,13 @@ a svg:hover #arrowlink{
   margin-top: 25vh;
 }
 
+span {
+  font-size: 15px;
+}
+
+.panel-title {
+  text-align: center;
+}
 #title{
   text-align: center;
 }
