@@ -17,7 +17,7 @@ h3 {
 
   /*Top Animations*/
 .jumbotron {
-  height: 80vh;
+  height: 105vh;
   text-align: center;
   position: relative;
   background: -webkit-linear-gradient(left top, rgb(17, 7, 77), black); /* For Safari 5.1 to 6.0 */
@@ -43,7 +43,7 @@ a svg:hover #arrowlink{
   line-height: inherit;
   letter-spacing: 3px;
   display: none;
-  margin-top: 25vh;
+  margin-top: 30vh;
   color: white;
 }
 img {

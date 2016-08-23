@@ -73,7 +73,8 @@ function buildGraphs() {
 // NPS SCORE AND RING CHART
 
           $.ajax({
-            url: "http://localhost:9000/api/surveys",
+            url: "https://evening-retreat-40915.herokuapp.com/api/surveys",
+            // headers: {"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU3YmJjODFiZjJhN2MwMWE1Y2JmOWYyMiIsImVtYWlsIjoiZ2VyYWxkQGcuY29tIiwiaWF0IjoxNDcxOTU0MTc3LCJleHAiOjE0NzE5NjQ5Nzd9.dZzFLd_oaEtgwVvCDpsrKGy-ryFfRg0wOc8FLV_bS5w"},
             type: "GET",
             datatype: 'json',
           }).done(function(result) {
@@ -156,18 +157,18 @@ function buildGraphs() {
 
 buildGraphs();
 
-setInterval(buildGraphs, 100000000);
+setInterval(buildGraphs, 1000000);
 
 var select = $('#dropdown');
 
 select.on('change', function() {
   var selectedval = this.value;
   $.ajax({
-    url: "http://localhost:9000/api/surveys",
+    url: "https://evening-retreat-40915.herokuapp.com/api/surveys",
+    // header: {"Authorization" : "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU3YmJjODFiZjJhN2MwMWE1Y2JmOWYyMiIsImVtYWlsIjoiZ2VyYWxkQGcuY29tIiwiaWF0IjoxNDcxOTU0MTc3LCJleHAiOjE0NzE5NjQ5Nzd9.dZzFLd_oaEtgwVvCDpsrKGy-ryFfRg0wOc8FLV_bS5w"},
     type: "GET",
     datatype: 'json',
   }).done(function(data) {
-          console.log(data.apiData[0].Brand);
     for(var i = 0; i < 9; i++) {
       if(data.apiData[i].Brand === selectedval) {
         var reasonRowChart   = dc.rowChart("#chart-row-reason");
