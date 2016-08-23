@@ -24,7 +24,7 @@ function buildGraphs() {
 
 
     $.ajax({
-    url: "http://safe-falls-84531.herokuapp.com/api/v1/searches/",
+    url: "https://safe-falls-84531.herokuapp.com/api/v1/searches/",
     type: 'GET',
     datatype: 'json'
     }).done(function(data) {
