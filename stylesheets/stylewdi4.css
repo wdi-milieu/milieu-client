@@ -1,0 +1,162 @@
+/*Basic HTML elements*/
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: white !important;
+}
+
+body {
+  background-color: #7B6D8D !important;
+}
+
+h3 {
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+  /*Top Animations*/
+.jumbotron {
+  height: 105vh;
+  text-align: center;
+  position: relative;
+  background: -webkit-linear-gradient(left top, #7B6D8D, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #7B6D8D, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #7B6D8D, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to obottom right, #7B6D8D, black); /* Standard syntax */
+}
+
+#arrow {
+  display: block;
+  margin-top: 5vh;
+}
+
+a svg:hover #arrowlink{
+  stroke: white;
+}
+
+#brandname {
+  font-family: 'Hind Guntur', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: 3px;
+  display: none;
+  margin-top: 30vh;
+  color: white;
+}
+img {
+  height: 20px;
+  width: 20px;
+  float: right;
+}
+#dropdown {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  background-color: black;
+  color: white;
+}
+
+#reload:hover {
+ cursor: pointer;
+}
+  /*Simple Navbar*/
+.navbar {
+  background: none;
+  margin-top: -5%;
+}
+#samplesize {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+hr {
+  border-top: none;
+}
+  /*Panel Placeholders for Graphs*/
+.panel{
+  margin-bottom: 0px !important;
+}
+
+.panel-title, #title {
+  text-align: center;
+}
+
+.hr {
+  border-top: none !important;
+}
+
+.explain {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+#title {
+  color: white;
+}
+
+.panel-body {
+  background-color: #7B6D8D ;
+  border: 1px solid white;
+}
+
+.hr {
+  margin-top: 0;
+  /*margin-bottom: 4px;*/
+  width: 30vw;
+}
+  /*Chart Formatting*/
+#graph {
+  height: 83vh;
+}
+#graphsmallone, #graphsmalltwo {
+  height: 32.5vh;
+}
+
+#chart-ring-category {
+  margin-left: 28%;
+  margin-top: 5%;
+}
+
+#chart-row-reason {
+  margin-top: 2%;
+}
+
+#chart-row-twitterpos {
+  border-radius: 5px;
+  margin-bottom: 1%;
+}
+
+#chart-row-twitterneg {
+  border-radius: 5px;
+  margin-bottom: 1%;
+}
+
+
+/*D3 Colors*/
+.dc-chart .axis path, .dc-chart .axis line.grid-line {
+stroke: black;
+}
+
+.dc-chart g.row text, .dc-chart g.axis {
+  fill: white !important;
+}
+
+.dc-chart g.axis path {
+  fill: #111 !important;
+}
+
+.dc-chart text.pie-slice {
+  fill: white;
+  font-size: 10px;
+}
+
+/*Simple Footer*/
+#footer {
+  height: 40px;
+  text-align: right;
+}
