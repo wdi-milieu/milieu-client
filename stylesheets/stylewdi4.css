@@ -97,11 +97,16 @@ hr {
 
 #title {
   color: white;
+  font-size: 50px;
 }
 
 .panel-body {
   background-color: #7B6D8D ;
   border: 1px solid white;
+}
+
+#chart-row-wdi4 {
+  margin-top: 4%;
 }
 
 .hr {
@@ -111,43 +116,32 @@ hr {
 }
   /*Chart Formatting*/
 #graph {
-  height: 83vh;
-}
-#graphsmallone, #graphsmalltwo {
-  height: 32.5vh;
+  height: 31vh;
 }
 
-#chart-ring-category {
-  margin-left: 28%;
-  margin-top: 5%;
+.panel {
+  margin-top: 3%;
 }
 
-#chart-row-reason {
-  margin-top: 2%;
+.container {
+  width: 90% !important;
 }
-
-#chart-row-twitterpos {
-  border-radius: 5px;
-  margin-bottom: 1%;
+.question {
+  text-align: center;
 }
-
-#chart-row-twitterneg {
-  border-radius: 5px;
-  margin-bottom: 1%;
-}
-
 
 /*D3 Colors*/
 .dc-chart .axis path, .dc-chart .axis line.grid-line {
-stroke: black;
+stroke: #7B6D8D;
 }
 
 .dc-chart g.row text, .dc-chart g.axis {
-  fill: white !important;
+  fill: black !important;
 }
 
 .dc-chart g.axis path {
-  fill: #111 !important;
+  fill: white !important;
+  stroke: #7B6D8D;
 }
 
 .dc-chart text.pie-slice {
