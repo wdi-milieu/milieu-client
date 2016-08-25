@@ -8,10 +8,7 @@ a {
 }
 
 body {
-  background: -webkit-linear-gradient(left top, #7B6D8D, black); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, #7B6D8D, black); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, #7B6D8D, black); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to obottom right, #7B6D8D, black); /* Standard syntax */
+  background-color: #7B6D8D !important;
 }
 
 h3 {
@@ -82,10 +79,15 @@ hr {
   /*Panel Placeholders for Graphs*/
 .panel{
   margin-bottom: 0px !important;
+  background-color: #7B6D8D !important;
 }
+ .question {
+   color: white;
+ }
 
 .panel-title, #title {
   text-align: center;
+  font-size: 1em;
 }
 
 .hr {
@@ -100,12 +102,11 @@ hr {
 
 #title {
   color: white;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .panel-body {
   background-color: #7B6D8D ;
-  border: 1px solid white;
 }
 
 #chart-row-wdi4 {
@@ -131,6 +132,7 @@ hr {
 }
 .question {
   text-align: center;
+  font-size: 18px;
 }
 
 /*D3 Colors*/
@@ -139,7 +141,7 @@ stroke: #7B6D8D;
 }
 
 .dc-chart g.row text, .dc-chart g.axis {
-  fill: black !important;
+  fill: white !important;
 }
 
 .dc-chart g.axis path {
@@ -154,6 +156,6 @@ stroke: #7B6D8D;
 
 /*Simple Footer*/
 #footer {
-  height: 40px;
+  height: 30px;
   text-align: right;
 }

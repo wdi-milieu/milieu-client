@@ -53,13 +53,13 @@ function buildGraphs() {
 
           function render_plotsThree(){
               twitterposRowChart
-                  .width(400).height(250)
+                  .width(350).height(220)
                   .dimension(positivityDim)
                   .group(positivityPerSearch_term)
                   .ordinalColors(['#28666E'])
                   .elasticX(true);
               twitternegRowChart
-                  .width(400).height(250)
+                  .width(350).height(215)
                   .dimension(negativityDim)
                   .group(negativityPerSearch_term)
                   .ordinalColors(['#8C271E'])
@@ -104,13 +104,13 @@ function buildGraphs() {
                 npsScorePerName = nameDim.group().reduceSum(function(d) {return +d.npsScore;});
             function render_plots(){
                 categoryRingChart
-                    .width(160).height(160)
+                    .width(130).height(130)
                     .dimension(categoryDim)
                     .group(npsScorePerCategory)
                     .ordinalColors(['#2B3D41', '#216869', '#56445D','#546A76'])
-                    .innerRadius(40);
+                    .innerRadius(20);
                 npsRowChart
-                    .width(450).height(490)
+                    .width(380).height(410)
                     .dimension(nameDim)
                     .group(npsScorePerName)
                     .ordinalColors(['#414288','#414288','#414288','#414288','#414288','#414288','#414288','#414288','red'])
@@ -137,7 +137,7 @@ function buildGraphs() {
 
             function render_plotsTwo(){
                 reasonRowChart
-                .width(450).height(170)
+                .width(350).height(140)
                 .dimension(shareDim)
                 .group(sharePerName)
                 .ordinalColors(['#766C7F'])

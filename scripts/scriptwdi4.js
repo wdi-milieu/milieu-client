@@ -36,10 +36,10 @@ datatype: 'json'
 
       function render_plots(){
           wdi4oneRowChart
-              .width(350).height(220)
+              .width(320).height(180)
               .dimension(questionDim)
               .group(optionPerQuestion)
-              .ordinalColors(['#C4CAD0'])
+              .ordinalColors(['#FF8C42'])
               .elasticX(true);
           dc.renderAll();
       }
@@ -61,10 +61,10 @@ datatype: 'json'
 
           function render_plotstwo(){
               wdi4twoRowChart
-                  .width(350).height(220)
+                  .width(320).height(180)
                   .dimension(questionDimtwo)
                   .group(optionPerQuestiontwo)
-                  .ordinalColors(['#C4CAD0'])
+                  .ordinalColors(['#FF8C42'])
                   .elasticX(true);
               dc.renderAll();
           }
@@ -86,10 +86,10 @@ datatype: 'json'
 
               function render_plotsthree(){
                   wdi4threeRowChart
-                      .width(350).height(220)
+                      .width(320).height(180)
                       .dimension(questionDimthree)
                       .group(optionPerQuestionthree)
-                      .ordinalColors(['#C4CAD0'])
+                      .ordinalColors(['#FF8C42'])
                       .elasticX(true);
                   dc.renderAll();
               }
@@ -111,10 +111,10 @@ datatype: 'json'
 
                   function render_plotsfour(){
                       wdi4fourRowChart
-                          .width(350).height(220)
+                          .width(320).height(180)
                           .dimension(questionDimfour)
                           .group(optionPerQuestionfour)
-                          .ordinalColors(['#C4CAD0'])
+                          .ordinalColors(['#FF8C42'])
                           .elasticX(true);
                       dc.renderAll();
                   }
@@ -135,10 +135,10 @@ datatype: 'json'
 
                       function render_plotsfive(){
                           wdi4fiveRowChart
-                              .width(350).height(220)
+                              .width(320).height(180)
                               .dimension(questionDimfive)
                               .group(optionPerQuestionfive)
-                              .ordinalColors(['#C4CAD0'])
+                              .ordinalColors(['#FF8C42'])
                               .elasticX(true);
                           dc.renderAll();
                       }
@@ -161,10 +161,10 @@ datatype: 'json'
 
                           function render_plotssix(){
                               wdi4sixRowChart
-                                  .width(350).height(220)
+                                  .width(320).height(180)
                                   .dimension(questionDimsix)
                                   .group(optionPerQuestionsix)
-                                  .ordinalColors(['#C4CAD0'])
+                                  .ordinalColors(['#FF8C42'])
                                   .elasticX(true);
                               dc.renderAll();
                           }

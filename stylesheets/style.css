@@ -88,6 +88,7 @@ img {
 
 #title {
   color: white;
+  margin-top: 1%;
 }
 
 .panel-body {
@@ -101,19 +102,20 @@ img {
 }
   /*Chart Formatting*/
 #graph {
-  height: 70vh;
+  height: 68vh;
 }
 #graphsmallone, #graphsmalltwo {
-  height: 32.5vh;
+  height: 31vh;
 }
 
 #chart-ring-category {
-  margin-left: 28%;
+  margin-left: 34%;
   margin-top: 5%;
 }
 
 #chart-row-reason {
-  margin-top: 2%;
+  margin-top: 1%;
+  margin-left: 2%;
 }
 
 #chart-row-twitterpos {
@@ -147,6 +149,6 @@ stroke: black;
 
 /*Simple Footer*/
 #footer {
-  height: 40px;
+  height: 20px;
   text-align: right;
 }
