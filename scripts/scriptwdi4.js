@@ -48,9 +48,9 @@ datatype: 'json'
       var wdi4twoRowChart   = dc.rowChart("#chart-row-wdi4two");
 
       var datasettwo = [
-          {option: data.q2opt1, question: "ANSWER ONE"},
-          {option: data.q2opt2, question: "ANSWER TWO"},
-          {option: data.q2opt3, question: "ANSWER THREE"},
+          {option: data.q2opt1, question: "YUZHENG"},
+          {option: data.q2opt2, question: "ZHEZHANG"},
+          {option: data.q2opt3, question: "MING"},
       ];
 
       var xfiltertwo = crossfilter(datasettwo),
@@ -73,9 +73,9 @@ datatype: 'json'
           var wdi4threeRowChart   = dc.rowChart("#chart-row-wdi4three");
 
           var datasetthree = [
-              {option: data.q3opt1, question: "ANSWER ONE"},
-              {option: data.q3opt2, question: "ANSWER TWO"},
-              {option: data.q3opt3, question: "ANSWER THREE"},
+              {option: data.q3opt1, question: "NICHOLAS"},
+              {option: data.q3opt2, question: "KAI"},
+              {option: data.q3opt3, question: "DYLAN"},
           ];
 
           var xfilterthree = crossfilter(datasetthree),
@@ -98,9 +98,9 @@ datatype: 'json'
               var wdi4fourRowChart   = dc.rowChart("#chart-row-wdi4four");
 
               var datasetfour = [
-                  {option: data.q4opt1, question: "ANSWER ONE"},
-                  {option: data.q4opt2, question: "ANSWER TWO"},
-                  {option: data.q4opt3, question: "ANSWER THREE"},
+                  {option: data.q4opt1, question: "LUQMAN"},
+                  {option: data.q4opt2, question: "ZHEZHANG"},
+                  {option: data.q4opt3, question: "SABRINA"},
               ];
 
               var xfilterfour = crossfilter(datasetfour),
@@ -123,8 +123,8 @@ datatype: 'json'
                   var wdi4fiveRowChart   = dc.rowChart("#chart-row-wdi4five");
 
                   var datasetfive = [
-                      {option: data.q5opt1, question: "ANSWER ONE"},
-                      {option: data.q5opt2, question: "ANSWER TWO"},
+                      {option: data.q5opt1, question: "ANNEXE 3"},
+                      {option: data.q5opt2, question: "BOMBSHELTER"},
                   ];
 
                   var xfilterfive = crossfilter(datasetfive),
@@ -147,9 +147,10 @@ datatype: 'json'
                       var wdi4sixRowChart   = dc.rowChart("#chart-row-wdi4six");
 
                       var datasetsix = [
-                          {option: data.q6opt1, question: "ANSWER ONE"},
-                          {option: data.q6opt2, question: "ANSWER TWO"},
-                          {option: data.q6opt3, question: "ANSWER THREE"},
+                          {option: data.q6opt1, question: "BARNEY"},
+                          {option: data.q6opt2, question: "CURIAN"},
+                          {option: data.q6opt3, question: "EDISON"},
+                          {option: data.q6opt3, question: "VERON"},
                       ];
 
                       var xfiltersix = crossfilter(datasetsix),

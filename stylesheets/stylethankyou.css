@@ -1,0 +1,13 @@
+body {
+  background-color: #7B6D8D;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 70vw;
+  height: 70vh;
+  margin-top: 8%;
+  border: 2px solid white;
+  border-radius: 5px;
+}
