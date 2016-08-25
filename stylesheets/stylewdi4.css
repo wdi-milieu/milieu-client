@@ -8,7 +8,10 @@ a {
 }
 
 body {
-  background-color: #7B6D8D !important;
+  background: -webkit-linear-gradient(left top, #7B6D8D, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #7B6D8D, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #7B6D8D, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to obottom right, #7B6D8D, black); /* Standard syntax */
 }
 
 h3 {
