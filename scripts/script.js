@@ -34,12 +34,12 @@ function buildGraphs() {
       var data3 = [
           {negativity: data.items[0].negativity, positivity: data.items[0].positivity, search_term: "#apple"},
           {negativity: data.items[1].negativity, positivity: data.items[1].positivity, search_term: "#samsung"},
-          {negativity: data.items[2].negativity, positivity: data.items[2].positivity, search_term: "#breadtalk"},
+          // {negativity: data.items[2].negativity, positivity: data.items[2].positivity, search_term: "#breadtalk"},
           {negativity: data.items[3].negativity, positivity: data.items[3].positivity, search_term: "#singtel"},
           {negativity: data.items[4].negativity, positivity: data.items[4].positivity, search_term: "#starhub"},
-          {negativity: data.items[5].negativity, positivity: data.items[5].positivity, search_term: "#google"},
+          // {negativity: data.items[5].negativity, positivity: data.items[5].positivity, search_term: "#google"},
           {negativity: data.items[6].negativity, positivity: data.items[6].positivity, search_term: "#ntuc"},
-          {negativity: data.items[7].negativity, positivity: data.items[7].positivity, search_term: "#giant"},
+          // {negativity: data.items[7].negativity, positivity: data.items[7].positivity, search_term: "#giant"},
           {negativity: data.items[8].negativity, positivity: data.items[8].positivity, search_term: "#trump"},
       ];
 
@@ -53,13 +53,13 @@ function buildGraphs() {
 
           function render_plotsThree(){
               twitterposRowChart
-                  .width(350).height(220)
+                  .width(350).height(205)
                   .dimension(positivityDim)
                   .group(positivityPerSearch_term)
                   .ordinalColors(['#28666E'])
                   .elasticX(true);
               twitternegRowChart
-                  .width(350).height(215)
+                  .width(350).height(205)
                   .dimension(negativityDim)
                   .group(negativityPerSearch_term)
                   .ordinalColors(['#8C271E'])
@@ -86,12 +86,12 @@ function buildGraphs() {
             var data1 = [
                 {Name: data[0].Brand, npsScore: data[0].NPS_Score, category: "TECH",'total': 5},
                 {Name: data[1].Brand, npsScore: data[1].NPS_Score, category:" FMCG",'total': 5},
-                {Name: data[2].Brand, npsScore: data[2].NPS_Score, category: " FMCG",'total': 3},
+                // {Name: data[2].Brand, npsScore: data[2].NPS_Score, category: " FMCG",'total': 3},
                 {Name: data[3].Brand, npsScore: data[3].NPS_Score, category: "TECH",'total': 5},
                 {Name: data[4].Brand, npsScore: data[4].NPS_Score, category: " FMCG",'total': 5},
-                {Name: data[5].Brand, npsScore: data[5].NPS_Score, category: "TECH",'total': 5},
+                // {Name: data[5].Brand, npsScore: data[5].NPS_Score, category: "TECH",'total': 5},
                 {Name: data[6].Brand, npsScore: data[6].NPS_Score, category: " TELCO",'total': 3},
-                {Name: data[7].Brand, npsScore: data[7].NPS_Score, category: " TELCO",'total': 3},
+                // {Name: data[7].Brand, npsScore: data[7].NPS_Score, category: " TELCO",'total': 3},
                 {Name: data[8].Brand, npsScore: data[8].NPS_Score, category: "ASS",'total': 2},
             ];
             // set crossfilter with first dataset
@@ -110,10 +110,10 @@ function buildGraphs() {
                     .ordinalColors(['#2B3D41', '#216869', '#56445D','#546A76'])
                     .innerRadius(20);
                 npsRowChart
-                    .width(380).height(410)
+                    .width(370).height(400)
                     .dimension(nameDim)
                     .group(npsScorePerName)
-                    .ordinalColors(['#414288','#414288','#414288','#414288','#414288','#414288','#414288','#414288','red'])
+                    .ordinalColors(['#414288','#414288','#414288','#414288','#414288','red'])
                     .elasticX(true);
                 dc.renderAll();
             }
@@ -157,7 +157,7 @@ function buildGraphs() {
 
 buildGraphs();
 
-setInterval(buildGraphs, 40000);
+setInterval(buildGraphs, 1000000);
 
 var select = $('#dropdown');
 
@@ -187,7 +187,7 @@ select.on('change', function() {
 
             function render_plotsTwo(){
                 reasonRowChart
-                .width(450).height(170)
+                .width(350).height(140)
                 .dimension(shareDim)
                 .group(sharePerName)
                 .ordinalColors(['#766C7F'])
