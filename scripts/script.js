@@ -157,7 +157,7 @@ function buildGraphs() {
 
 buildGraphs();
 
-setInterval(buildGraphs, 1000000);
+setInterval(buildGraphs, 60000);
 
 var select = $('#dropdown');
 
